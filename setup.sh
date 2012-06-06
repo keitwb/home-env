@@ -28,10 +28,10 @@ echo "Setting up home directory..."
 echo -e "\nHooking up dotfiles:"
 for f in $dotfiles; do
     original=$HOME/.$f
-    if [[ -h $original ]]; then
-        echo "$original: symlink already exists, skipping..."
-        continue
-    fi
+    #if [[ -h $original ]]; then
+        #echo "$original: symlink already exists, skipping..."
+        #continue
+    #fi
 
     [[ -e $original ]] && mv $original $dotfile_backup/
     ln -s $(pwd)/$f $HOME/.$f
