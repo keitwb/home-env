@@ -29,3 +29,5 @@ alias po="popd"
 alias c="clear"
 alias v="less"
 alias j="jobs"
+
+alias gitst="git status"
