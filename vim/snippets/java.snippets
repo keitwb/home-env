@@ -1,0 +1,23 @@
+snippet getset
+	public ${1:type} get${2:varName}() {
+		return m$2;
+	}
+	public void set$2($1 $2) {
+		m$2 = $2;
+	}
+
+snippet TAG
+	public final static String TAG = ${1:clsName}.class.getSimpleName();
+
+snippet androidcls
+	public class ${1:name} extends ${2:base} {
+		public final static String TAG = $1.class.getSimpleName();
+
+		@Override
+		public void onCreate(Bundle icicle) {
+			super.onCreate(icicle);
+			setContentView(R.layout.${3:layout});
+
+		}
+		${4}
+	}

@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/benkeith/.vim/ftplugin/lisp/limp'
+let g:netrw_dirhist_2='/usr/local/lib/python2.6/dist-packages/fixture-1.4-py2.6.egg/fixture/loadable'
+let g:netrw_dirhist_3='/share/downloads/linux/mongodb-linux-i686-2.0.1/bin'
+let g:netrw_dirhist_4='/home/benkeith/.vim'

@@ -1,0 +1,7 @@
+[user]
+	name = Ben Keith
+	email = keitwb@gmail.com
+[color]
+	ui = auto
+[core]
+    excludesfile = .gitignore

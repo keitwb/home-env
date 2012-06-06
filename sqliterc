@@ -1,0 +1,3 @@
+.mode column
+.null NULL
+.header ON

@@ -1,0 +1,4 @@
+/vim/view
+/vim/bundle/*
+
+!/vim/bundle/vundle
