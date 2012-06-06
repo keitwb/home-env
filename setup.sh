@@ -34,7 +34,7 @@ for f in $dotfiles; do
     #fi
 
     [[ -e $original ]] && mv $original $dotfile_backup/
-    ln -s $(pwd)/$f $HOME/.$f
+    ln -sf $(pwd)/$f $HOME/.$f
     echo "Creating symlink for .$f"
 done
 
