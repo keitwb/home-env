@@ -13,7 +13,6 @@ dotfile_backup=$HOME/.dotfile_backup
 dotfiles="bash_aliases
           bash_login
           bash_logout
-          bash_profile
           bashrc
           dircolors
           dircolors-256
