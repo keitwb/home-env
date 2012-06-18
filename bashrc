@@ -77,7 +77,7 @@ fi
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ~/.bash_aliases ]; then
+if [ -e ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
@@ -92,7 +92,7 @@ fi
 # This file should contain any local configuration that will not be shared
 # between accounts (this bashrc is stored in a git repo).  This file, naturally
 # should not be put in source control.
-if [ -f ~/.bashrc-local ]; then
+if [ -e ~/.bashrc-local ]; then
     . ~/.bashrc-local
 fi
 
