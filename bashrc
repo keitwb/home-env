@@ -139,6 +139,10 @@ fi
 
 HISTIGNORE="[   ]*:&:bg:fg:cd"
 
+# Groovy setup
+GROOVY_HOME=/share/code/java/groovy/groovy-2.0.0/
+PATH=$PATH:$GROOVY_HOME/bin
+
 # Functions borrowed from bash examples
 psgrep()
 {

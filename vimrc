@@ -150,6 +150,9 @@ set directory=~/tmp,/var/tmp,/tmp
 " Silence an error when vim does not have gui support
 let g:CSApprox_verbose_level = 0
 
+" Enable python omni complete
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -176,5 +179,7 @@ Bundle 'taglist-plus'
 Bundle 'CSApprox'
 Bundle 'bufexplorer.zip'
 Bundle 'rails.vim'
+Bundle 'python.vim'
+Bundle 'surround.vim'
 "Bundle 'bufmru.vim'
 
