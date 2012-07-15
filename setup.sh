@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 
 # Dotfile/bin setup script
 # Backs up all original dot files before replacing them with symlinks to the
@@ -34,9 +34,11 @@ for f in $dotfiles; do
         #echo "$original: symlink already exists, skipping..."
         #continue
     #fi
-    [[ -d $f ]] && ! [[ -d $original ]] && mkdir $(dirname $f)
-    [[ -e $original ]] && mv $original $dotfile_backup/
-    ln -sf $(pwd)/$f $HOME/.$f
+    [[ -d $(dirname $f) ]] && ! [[ -d $(dirname $original) ]] && mkdir $HOME/.$(dirname $f)
+    [[ -f $original ]] && mv $original $dotfile_backup/
+    # -f forces clobbering; -T forces the link in the home dir and not in an
+    # already existing directory
+    ln -sfT $(pwd)/$f $HOME/.$f
     echo "Creating symlink for .$f"
 done
 
