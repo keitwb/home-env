@@ -100,7 +100,7 @@ fi
 export JAVA_HOME=/usr/lib/jvm/java-6-sun
 PATH=$PATH:$HOME/code/android/android-sdk-linux_x86/tools:$HOME/code/android/android-sdk-linux_x86/platform-tools
 # PATH=$PATH:$HOME/code/gae/google_appengine
-PATH=$PATH:/var/lib/gems/1.8/bin
+#PATH=$PATH:/var/lib/gems/1.8/bin
 #PATH=$PATH:/usr/local/lib/mongodb-linux-i686-2.0.1/bin
 
 set -o vi
@@ -130,7 +130,18 @@ export PIP_RESPECT_VIRTUALENV=true
 # PythonBrew setup
 [[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
 
+# Perlbrew setup
+if [ -f ~/.perlbrew/etc/bashrc ]; then
+    export PERLBREW_ROOT=~/.perlbrew
+    export PERLBREW_HOME=~/.perlbrew
+    source ~/.perlbrew/etc/bashrc
+fi
+
 HISTIGNORE="[   ]*:&:bg:fg:cd"
+
+# Groovy setup
+GROOVY_HOME=/share/code/java/groovy/groovy-2.0.0/
+PATH=$PATH:$GROOVY_HOME/bin
 
 # Functions borrowed from bash examples
 psgrep()

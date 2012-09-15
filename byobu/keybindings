@@ -1,0 +1,13 @@
+source /usr/share/byobu/keybindings/common
+
+
+bindkey -k k2 screen					# F2  | Create new window
+bindkey -k k3 prev					# F3  | Previous Window
+bindkey -k k4 next					# F4  | Next Window
+bindkey -k k5 
+bindkey -k k6 
+bindkey -k k7 
+bindkey -k k8
+bindkey -k k9
+bindkey -k F2
+

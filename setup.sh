@@ -1,9 +1,9 @@
-#!/bin/bash
+#!/bin/bash -x
 
 # Dotfile/bin setup script
 # Backs up all original dot files before replacing them with symlinks to the
-# undotted files in this folder.  This script should be run after each pull from
-# the git repo. 
+# undotted files in this folder.  This script should be run from the repo
+# directory after each pull from the git repo. 
 
 dotfile_backup=$HOME/.dotfile_backup
 
@@ -13,8 +13,8 @@ dotfile_backup=$HOME/.dotfile_backup
 dotfiles="bash_aliases
           bash_login
           bash_logout
-          bash_profile
           bashrc
+          byobu/keybindings
           dircolors
           dircolors-256
           gitconfig
@@ -23,6 +23,7 @@ dotfiles="bash_aliases
           sqliterc
           vimrc
           vim
+          unison/share.prf
          "
 
 echo "Setting up home directory..."
@@ -33,14 +34,17 @@ for f in $dotfiles; do
         #echo "$original: symlink already exists, skipping..."
         #continue
     #fi
-
-    [[ -e $original ]] && mv $original $dotfile_backup/
-    ln -sf $(pwd)/$f $HOME/.$f
+    [[ -d $(dirname $f) ]] && ! [[ -d $(dirname $original) ]] && mkdir $HOME/.$(dirname $f)
+    [[ -f $original ]] && mv $original $dotfile_backup/
+    # -f forces clobbering; -T forces the link in the home dir and not in an
+    # already existing directory
+    ln -sfT $(pwd)/$f $HOME/.$f
     echo "Creating symlink for .$f"
 done
 
 echo -e "\nHooking up bin folder:"
 # Copy the bin folder over to the home dir
+[[ -d $HOME/bin ]] || mkdir $HOME/bin
 [[ -d bin ]] && for f in bin/*; do
     original=$HOME/$f
 
