@@ -88,17 +88,10 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-# Source the local bashrc (.bashrc-local)
-# This file should contain any local configuration that will not be shared
-# between accounts (this bashrc is stored in a git repo).  This file, naturally
-# should not be put in source control.
-if [ -e ~/.bashrc-local ]; then
-    . ~/.bashrc-local
-fi
-
 # Custom Environmental Variables
-export JAVA_HOME=/usr/lib/jvm/java-6-sun
-PATH=$PATH:$HOME/code/android/android-sdk-linux_x86/tools:$HOME/code/android/android-sdk-linux_x86/platform-tools
+export CLASSPATH=$(find /opt/javalib/ -name '*.jar' -printf '%p:' | sed 's/:$//')
+#export JAVA_HOME=/usr/lib/jvm/java-6-sun
+PATH=$PATH:$HOME/code/android/android-sdk-linux/tools:$HOME/code/android/android-sdk-linux/platform-tools
 # PATH=$PATH:$HOME/code/gae/google_appengine
 #PATH=$PATH:/var/lib/gems/1.8/bin
 #PATH=$PATH:/usr/local/lib/mongodb-linux-i686-2.0.1/bin
@@ -116,7 +109,7 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # This loads RVM into a shell session.
 
 # VirtualEnvWrapper setup
-vew_script=/usr/local/bin/virtualenvwrapper_lazy.sh
+vew_script=/usr/bin/virtualenvwrapper.sh
 if [[ -x $vew_script ]]; then
     export WORKON_HOME=$HOME/.virtualenvs
     export PROJECT_HOME=$HOME/code/projects
@@ -158,4 +151,17 @@ pskill()
 	kill -9 $pid
 	echo "slaughtered."
 }
+
+path_append ()  { path_remove $1; export PATH="$PATH:$1"; }
+path_prepend () { path_remove $1; export PATH="$1:$PATH"; }
+path_remove ()  { export PATH=`echo -n $PATH | awk -v RS=: -v ORS=: '$0 != "'$1'"' | sed 's/:$//'`; }
+
+# Source the local bashrc (.bashrc-local)
+# This file should contain any local configuration that will not be shared
+# between accounts (this bashrc is stored in a git repo).  This file, naturally
+# should not be put in source control.  Put it last in .bashrc so that any
+# settings in it will override settings here.
+if [ -f ~/.bashrc-local ]; then
+    . ~/.bashrc-local
+fi
 
