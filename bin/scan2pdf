@@ -1,0 +1,70 @@
+#!/bin/bash -x
+
+function usage {
+    cat <<EOF
+    Usage: $0 [options] OUTPUT_PDF
+
+    Scans documents to the OUTPUT_PDF
+
+    Options:
+        -m      Scan multiple documents from the feeder
+        -d      Scan duplexed documents (requires manual intervention)
+
+EOF
+    exit 0
+}
+
+function batch_flag {
+    local is_duplex=$1
+    if $is_duplex; then
+        echo '--batch --batch-double'
+    else
+        echo '--batch'
+    fi
+}
+
+function calc_batch_start {
+    local prev_output=$1
+    IFS=":"
+    pages=($(echo $prev_output | grep 'Scanning page [0-9]\+' | sed -e 's/Scanning page //' | tr "\n" ":"))
+    echo $((${pages[${#pages[@]}-1]} + 1))
+}
+
+function rm_temp {
+    rm -rf $TEMPDIR
+}
+TEMPDIR=$(mktemp -d)
+trap rm_temp 0
+
+DUPLEX=false
+while getopts "dh" opt; do
+    case $opt in 
+        d)
+            DUPLEX=true
+            ;;
+        h)
+            usage
+            ;;
+    esac
+done
+
+OUTPUT_PDF=${@:$OPTIND:1}
+
+if [[ -z $OUTPUT_PDF ]]; then
+    echo 'You must specify an output pdf file!' >&2
+    exit 1
+fi
+
+cd $TEMPDIR
+IFS=
+SCAN_OUTPUT=$(scanimage $(batch_flag $DUPLEX) --format pnm)
+
+if $DUPLEX; then
+    bstart=$(calc_batch_start $SCAN_OUTPUT)
+    read -p "Rotate document stack and reinsert into feeder.  Press Enter to scan back side..."
+    scanimage --batch --batch-start=$bstart --batch-increment -2 --format pnm
+fi
+
+convert -quality 65 *.pnm tmp.jpeg
+convert *.jpeg $OUTPUT_PDF
+
