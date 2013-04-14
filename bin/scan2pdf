@@ -17,16 +17,16 @@ EOF
 function batch_flag {
     local is_duplex=$1
     if $is_duplex; then
-        echo '--batch --batch-double'
+        echo "--batch --batch-double"
     else
-        echo '--batch'
+        echo "--batch"
     fi
 }
 
 function calc_batch_start {
-    local prev_output=$1
+    local prev_output=$@
     IFS=":"
-    pages=($(echo $prev_output | grep 'Scanning page [0-9]\+' | sed -e 's/Scanning page //' | tr "\n" ":"))
+    local pages=($(echo $prev_output | grep -o 'Scanning page [0-9]\+' | sed -e 's/Scanning page //' | tr "\n" ":"))
     echo $((${pages[${#pages[@]}-1]} + 1))
 }
 
@@ -56,8 +56,15 @@ if [[ -z $OUTPUT_PDF ]]; then
 fi
 
 cd $TEMPDIR
-IFS=
-SCAN_OUTPUT=$(scanimage $(batch_flag $DUPLEX) --format pnm)
+FLAGS=$(batch_flag $DUPLEX)
+#IFS=
+SCAN_OUTPUT=$(scanimage $FLAGS --format pnm)
+#SCAN_OUTPUT=$(cat /tmp/output.txt)
+
+if [[ ! $? -eq 7 ]]; then
+    echo 'Failed to scan!' >&2
+    exit 1
+fi
 
 if $DUPLEX; then
     bstart=$(calc_batch_start $SCAN_OUTPUT)
