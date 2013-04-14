@@ -181,5 +181,6 @@ Bundle 'bufexplorer.zip'
 Bundle 'rails.vim'
 Bundle 'python.vim'
 Bundle 'surround.vim'
+Bundle 'moin.vim'
 "Bundle 'bufmru.vim'
 
