@@ -11,7 +11,6 @@ dotfile_backup=$HOME/.dotfile_backup
 
 # Add any new dotfiles to this string array or they won't be recognized
 dotfiles="bash_aliases
-          bash_login
           bash_logout
           bashrc
           byobu/keybindings
