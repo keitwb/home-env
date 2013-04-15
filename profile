@@ -23,3 +23,7 @@ fi
 
 export JAVA_HOME="/usr/lib/jvm/java-6-openjdk"
 
+if [ -z $SSH_AUTH_SOCK ]
+then
+    eval $(ssh-agent -s)
+fi
