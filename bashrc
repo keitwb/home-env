@@ -88,53 +88,12 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-# Custom Environmental Variables
-export CLASSPATH=$(find /opt/javalib/ -name '*.jar' -printf '%p:' | sed 's/:$//')
-#export JAVA_HOME=/usr/lib/jvm/java-6-sun
-PATH=$PATH:$HOME/code/android/android-sdk-linux/tools:$HOME/code/android/android-sdk-linux/platform-tools
-# PATH=$PATH:$HOME/code/gae/google_appengine
-#PATH=$PATH:/var/lib/gems/1.8/bin
-#PATH=$PATH:/usr/local/lib/mongodb-linux-i686-2.0.1/bin
-
 set -o vi
 export EDITOR="vim"
 
-Memoria="~/code/projects/memoria"
-shopt -s cdable_vars
-
 #TERM=screen-256color
 
-# RVM setup
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # This loads RVM into a shell session.
-
-# VirtualEnvWrapper setup
-vew_script=/usr/bin/virtualenvwrapper.sh
-if [[ -x $vew_script ]]; then
-    export WORKON_HOME=$HOME/.virtualenvs
-    export PROJECT_HOME=$HOME/code/projects
-
-    . $vew_script
-fi
-
-export PIP_VIRTUALENV_BASE=$WORKON_HOME
-export PIP_RESPECT_VIRTUALENV=true
-
-# PythonBrew setup
-[[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
-
-# Perlbrew setup
-if [ -f ~/.perlbrew/etc/bashrc ]; then
-    export PERLBREW_ROOT=~/.perlbrew
-    export PERLBREW_HOME=~/.perlbrew
-    source ~/.perlbrew/etc/bashrc
-fi
-
 HISTIGNORE="[   ]*:&:bg:fg:cd"
-
-# Groovy setup
-GROOVY_HOME=/share/code/java/groovy/groovy-2.0.0/
-PATH=$PATH:$GROOVY_HOME/bin
 
 # Functions borrowed from bash examples
 psgrep()
