@@ -13,7 +13,6 @@ dotfile_backup=$HOME/.dotfile_backup
 dotfiles="bash_aliases
           bash_logout
           bashrc
-          byobu/keybindings
           dircolors
           dircolors-256
           gitconfig
