@@ -23,6 +23,7 @@ dotfiles="bash_aliases
           sqliterc
           vimrc
           vim
+          tmux.conf
           unison/share.prf
          "
 

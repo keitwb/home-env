@@ -31,3 +31,4 @@ alias v="less"
 alias j="jobs"
 
 alias gitst="git status"
+alias tmux="tmux -2"
