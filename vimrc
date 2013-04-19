@@ -11,6 +11,8 @@ set cursorline
 " set cursorcolumn
 
 set cmdheight=1
+set laststatus=2
+set statusline=[%n]\ %<%.99f\ %h%w%m%r%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%y%=%-16(\ %l,%c-%v\ %)%P
 
 set wrap
 
@@ -149,6 +151,9 @@ set directory=~/tmp,/var/tmp,/tmp
 
 " Silence an error when vim does not have gui support
 let g:CSApprox_verbose_level = 0
+
+" Makes NerdTree close after you open a file
+let NERDTreeQuitOnOpen = 1
 
 " Enable python omni complete
 autocmd FileType python set omnifunc=pythoncomplete#Complete
