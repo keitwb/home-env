@@ -1,5 +1,5 @@
 root = /share
-root = ssh://benkeith-server:2222//share
+root = ssh://home.keitwb.com:2222//share
 
 log = true
 

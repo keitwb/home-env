@@ -54,7 +54,7 @@ set showmatch
 set nohls
 
 " set the console width after which to create a newline
-set textwidth=80
+set textwidth=79
 " don't break a line already longer than textwidth
 set formatoptions+=lv
 
@@ -187,5 +187,7 @@ Bundle 'rails.vim'
 Bundle 'python.vim'
 Bundle 'surround.vim'
 Bundle 'moin.vim'
+Bundle 'vim-flake8'
+
 "Bundle 'bufmru.vim'
 

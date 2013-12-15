@@ -7,3 +7,7 @@
     excludesfile = .gitignore
 [push]
 	default = current
+[branch]
+	autosetupmerge = true
+[merge]
+	conflictstyle = diff3

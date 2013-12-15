@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cat /dev/urandom | tr -dc [:graph:] | fold -w ${1-12} | head -n 10
