@@ -1,4 +1,4 @@
-runtime! debian.vim
+execute pathogen#infect()
 
 set nocompatible
 
@@ -157,37 +157,4 @@ let NERDTreeQuitOnOpen = 1
 
 " Enable python omni complete
 autocmd FileType python set omnifunc=pythoncomplete#Complete
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" Required for vundle
-Bundle 'gmarik/vundle'
-
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'vim-scripts/FuzzyFinder'
-Bundle 'The-NERD-tree'
-Bundle 'L9'
-Bundle "git://github.com/MarcWeber/vim-addon-mw-utils.git"
-Bundle "git://github.com/tomtom/tlib_vim.git"
-Bundle "git://github.com/honza/snipmate-snippets.git"
-Bundle "git://github.com/petdance/vim-perl.git"
-Bundle "git://github.com/garbas/vim-snipmate.git"
-Bundle 'mediawiki'
-Bundle 'mako.vim'
-Bundle "https://github.com/pangloss/vim-javascript"
-Bundle "JavaImp.vim--Lee"
-Bundle 'camelcasemotion'
-Bundle 'matchit.zip'
-Bundle 'taglist-plus'
-Bundle 'CSApprox'
-Bundle 'bufexplorer.zip'
-Bundle 'rails.vim'
-Bundle 'python.vim'
-Bundle 'surround.vim'
-Bundle 'moin.vim'
-Bundle 'vim-flake8'
-
-"Bundle 'bufmru.vim'
 
