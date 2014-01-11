@@ -158,3 +158,4 @@ let NERDTreeQuitOnOpen = 1
 " Enable python omni complete
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 
+let g:template_dir = "/home/benkeith/.vim/templates"

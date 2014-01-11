@@ -52,3 +52,15 @@
 [submodule "vim/bundle/tlib_vim"]
 	path = vim/bundle/tlib_vim
 	url = https://github.com/tomtom/tlib_vim.git
+[submodule "vim/bundle/Command-T"]
+	path = vim/bundle/Command-T
+	url = https://github.com/wincent/Command-T.git
+[submodule "vim/bundle/vim-autoclose"]
+	path = vim/bundle/vim-autoclose
+	url = https://github.com/andrewle/vim-autoclose.git
+[submodule "vim/bundle/vim-template"]
+	path = vim/bundle/vim-template
+	url = https://github.com/aperezdc/vim-template.git
+[submodule "vim/bundle/vim-surround"]
+	path = vim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround.git
