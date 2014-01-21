@@ -59,8 +59,8 @@ done
 git submodule init
 git submodule update
 
-echo -e "\nInstalling vim bundles..."
-vim '+read !echo Installing VIM bundles, please wait...' +BundleInstall +qall\!
+echo -e "\nBuilding vim help tags..."
+vim '+read !echo Building vim help tags, please wait...' +Helptags +qall\!
 
 echo -e "\nDone\n"
 
