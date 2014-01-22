@@ -74,10 +74,6 @@
 	path = vim/bundle/Command-T
 	url = https://github.com/wincent/Command-T.git
     ignore = dirty
-[submodule "vim/bundle/vim-autoclose"]
-	path = vim/bundle/vim-autoclose
-	url = https://github.com/andrewle/vim-autoclose.git
-    ignore = dirty
 [submodule "vim/bundle/vim-template"]
 	path = vim/bundle/vim-template
 	url = https://github.com/aperezdc/vim-template.git
