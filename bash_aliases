@@ -15,9 +15,9 @@ alias l='ls -CF'
 alias webshare="python -m SimpleHTTPServer"
 
 # Borrow some Mac commands (must install xsel package first)
-if command -v xsel >/dev/null 2>&1; then
-    alias pbcopy='xsel --clipboard --input'
-    alias pbpaste='xsel --clipboard --output'
+if command -v xclip >/dev/null 2>&1; then
+    alias pbcopy='xclip -in -selection clipboard'
+    alias pbpaste='xclip -out -selection clipboard'
 fi
 
 # opens the arg with the associated app
@@ -32,3 +32,5 @@ alias j="jobs"
 
 alias gitst="git status"
 alias tmux="tmux -2"
+alias vpn-on="sudo netcfg up server-vpn"
+alias vpn-off="sudo netcfg down server-vpn"

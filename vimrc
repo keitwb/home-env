@@ -33,13 +33,13 @@ set number
 set ruler
 
 " indentation settings
-set autoindent 
+set autoindent
 set smartindent
 set shiftwidth=4
 set tabstop=4
 set expandtab
 set backspace=indent,eol,start
-" set cindent 
+" set cindent
 
 filetype plugin on
 filetype plugin indent on
@@ -96,6 +96,10 @@ nnoremap <CR> o<Esc>
 nnoremap <C-j> i<CR><Esc>^
 
 nnoremap <Leader>rc :e ~/.vimrc<CR>
+nnoremap <Leader>p :set paste<CR>
+nnoremap <Leader>np :set nopaste<CR>
+nnoremap <Leader>s :set spell<CR>
+nnoremap <Leader>ns :set nospell<CR>
 
 " vertically expand current window
 if bufwinnr(1)
@@ -120,6 +124,8 @@ nnoremap <silent> <F5> :NERDTreeToggle<CR>
 nnoremap <F10> :NERDTreeFind<CR>
 " Cycle through open windows
 nnoremap <F12> 
+" Remove trailing whitespace
+nnoremap <Leader>rtw :%s/\s\+$//e<CR>
 
 let g:SuperTabDefaultCompletionType='context'
 
@@ -131,20 +137,20 @@ au BufNewFile,BufRead *.resource set filetype=javascript
 let g:ftplugin_sql_omni_key = '<C-B>'
 
 " JavaImp settings
-let g:JavaImpPaths = "/home/benkeith/code/android/android-sdk-linux_x86/platforms/android-8:/home/benkeith/code/projects/memoria/android/src:/home/benkeith/code/projects/memoria/android/gen:/home/benkeith/code/projects/memoria/android/libs:/home/benkeith/code/projects/memoria/android/tests/src" 
-" let g:JavaImpPaths = "/home/benkeith/.vim/javaimp/dirlinks" 
+let g:JavaImpPaths = "/home/benkeith/code/android/android-sdk-linux_x86/platforms/android-8:/home/benkeith/code/projects/memoria/android/src:/home/benkeith/code/projects/memoria/android/gen:/home/benkeith/code/projects/memoria/android/libs:/home/benkeith/code/projects/memoria/android/tests/src"
+" let g:JavaImpPaths = "/home/benkeith/.vim/javaimp/dirlinks"
 let g:JavaImpPathSep = ":"
 let g:JavaImpDataDir = $HOME . "/.vim/javaimp"
 let g:JavaImpDocPaths = "/home/benkeith/code/android/android-sdk-linux_x86/docs/reference/"
-let g:JavaImpDocViewer = "firefox" 
+let g:JavaImpDocViewer = "firefox"
 let g:JavaImpSortPkgSep = 0
 
 "make ant work with the :make command
-set makeprg=ant\ -quiet\ -emacs\ -find\ build.xml 
+set makeprg=ant\ -quiet\ -emacs\ -find\ build.xml
 
 let g:ExecPerl_perlpath = "/usr/bin/perl"
 
-"let g:bufmru_switchkey = "<C-N>" 
+"let g:bufmru_switchkey = "<C-N>"
 
 " swap file location
 set directory=~/tmp,/var/tmp,/tmp
@@ -159,3 +165,12 @@ let NERDTreeQuitOnOpen = 1
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 
 let g:template_dir = "/home/benkeith/.vim/templates"
+let NERDTreeIgnore = ['\.pyc$']
+set nospell
+
+match ErrorMsg '\s\+$'
+
+nnoremap / /\v
+vnoremap / /\v
+cnoremap %s/ %smagic/
+cnoremap \>s/ \>smagic/
