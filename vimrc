@@ -107,14 +107,20 @@ if bufwinnr(1)
   map - <C-W>-
 endif
 
-let tlist_javascript_settings = 'javascript;f:function;c:classes;m:methods;p:properties'
 
 "Map F8 to the tag browser
-nnoremap <silent> <F8> :TlistToggle<CR>
-let Tlist_Ctags_cmd="/usr/bin/ctags"
-let Tlist_Exit_OnlyWindow=1
-let Tlist_GainFocus_On_ToggleOpen=1
-let Tlist_Show_Menu=1
+"nnoremap <silent> <F8> :TlistToggle<CR>
+"let Tlist_Ctags_cmd="/usr/bin/ctags"
+"let Tlist_Exit_OnlyWindow=1
+"let Tlist_GainFocus_On_ToggleOpen=1
+"let Tlist_Show_Menu=1
+"let Tlist_Highlight_Tag_On_BufEnter = 1 "highlight current tag in taglist window
+"let Tlist_Process_File_Always = 1 "even without taglist window, create tags file, required for displaying tag in statusline
+"let Tlist_Display_Prototype = 1 "display full prototype instead of just function name
+"let Tlist_Close_On_Select = 1 "close taglist window once we selected something
+"let Tlist_Use_Right_Window = 1 "display taglist window on the right
+"let g:tlist_javascript_settings = 'javascript;f:function;c:classes;m:methods;p:properties'
+"let g:tlist_python_settings = 'python;c:class;m:member;f:function;v:variable'
 
 " Toggle the file explorer
 nnoremap <silent> <F5> :NERDTreeToggle<CR>
@@ -150,8 +156,6 @@ set makeprg=ant\ -quiet\ -emacs\ -find\ build.xml
 
 let g:ExecPerl_perlpath = "/usr/bin/perl"
 
-"let g:bufmru_switchkey = "<C-N>"
-
 " swap file location
 set directory=~/tmp,/var/tmp,/tmp
 
@@ -168,6 +172,7 @@ let g:template_dir = "/home/benkeith/.vim/templates"
 let NERDTreeIgnore = ['\.pyc$']
 set nospell
 
+" Highlight trailing whitespace in red
 match ErrorMsg '\s\+$'
 
 nnoremap / /\v
