@@ -83,3 +83,5 @@ EventMachine
 API
 CouchDB
 RVM
+Solr
+util
