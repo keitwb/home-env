@@ -11,3 +11,7 @@
 	autosetupmerge = true
 [merge]
 	conflictstyle = diff3
+[diff]
+	tool = vimdiff
+[rerere]
+	enabled = true

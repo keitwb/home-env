@@ -124,6 +124,7 @@ let g:SuperTabDefaultCompletionType='context'
 au BufNewFile,BufRead *.page set filetype=html
 au BufNewFile,BufRead *.component set filetype=html
 au BufNewFile,BufRead *.resource set filetype=javascript
+au BufNewFile,BufRead *.html.us set filetype=html
 
 let g:ftplugin_sql_omni_key = '<C-B>'
 

@@ -34,3 +34,8 @@ alias gitst="git status"
 alias tmux="tmux -2"
 alias vpn-on="sudo netcfg up server-vpn"
 alias vpn-off="sudo netcfg down server-vpn"
+_dbash() {
+  docker exec -it $1 bash
+}
+alias dbash=_dbash
+alias tmuxn="tmux new-sess -s"
