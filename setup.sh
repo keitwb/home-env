@@ -17,6 +17,7 @@ dotfiles="bash_aliases
           dircolors-256
           gitconfig
           gitignore
+          mutt
           profile
           sqliterc
           vimrc

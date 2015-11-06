@@ -1,0 +1,2 @@
+text/html; firefox %s ;
+text/html; elinks -dump ; copiousoutput;
