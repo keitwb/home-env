@@ -1,0 +1,6 @@
+set from = 'keitwb@gmail.com'
+set realname = 'Ben Keith'
+set imap_user = 'keitwb@gmail.com'
+source ~/.mutt/gmail-common
+
+source ~/.mutt/secret.personal

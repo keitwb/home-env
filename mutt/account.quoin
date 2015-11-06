@@ -1,0 +1,6 @@
+set from = 'ben.keith@quoininc.com'
+set realname = 'Keith, Ben'
+set imap_user = 'bkeith@quoininc.com'
+source ~/.mutt/gmail-common
+
+source ~/.mutt/secret.quoin
