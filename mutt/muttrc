@@ -1,17 +1,18 @@
-set header_cache =~/.mutt/cache/headers
-set message_cachedir =~/.mutt/cache/bodies
-set certificate_file =~/.mutt/certificates
 set ssl_force_tls = yes
 set move = no
-unset imap_passive
-set imap_keepalive = 900
-set mail_check = 40
+set mbox_type=Maildir
 set fast_reply = yes
 set include = yes
 set confirmappend = no
 set delete = yes
 set text_flowed = yes
 set alias_file = ~/.mutt/aliases
+source $alias_file
+set sort_alias = address
+set crypt_use_gpgme=yes
+set timeout = 10
+
+source ~/.mutt/mailboxes
 
 folder-hook 'quoininc.com' 'source ~/.mutt/account.quoin'
 folder-hook 'keitwb' 'source ~/.mutt/account.personal'
@@ -23,6 +24,7 @@ source ~/.mutt/account.personal
 set sort=threads
 set sort_browser=reverse-date
 set sort_aux=reverse-last-date-received
+set sort_browser = alpha
 
 set date_format="%m-%d-%Y %T"
 set index_format="%2C | %Z [%d] %-30.30F (%-4.4c) %s"
@@ -47,5 +49,7 @@ bind pager [ previous-page
 bind pager ] next-page
 bind pager j next-line
 bind pager k previous-line
+bind pager \Cj next-undeleted
+bind pager \Ck previous-undeleted
 
 source ~/.mutt/color

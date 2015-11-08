@@ -18,6 +18,7 @@ dotfiles="bash_aliases
           gitconfig
           gitignore
           mutt
+          offlineimaprc
           profile
           sqliterc
           vimrc

@@ -1,6 +1,7 @@
 set from = 'ben.keith@quoininc.com'
 set realname = 'Keith, Ben'
-set imap_user = 'bkeith@quoininc.com'
+set folder = ~/Mail/quoin
+set my_smtp_user = 'bkeith@quoininc.com'
 source ~/.mutt/gmail-common
 
-source ~/.mutt/secret.quoin
+source ~/.mutt/secret.smtp.quoin
