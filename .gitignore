@@ -4,3 +4,4 @@ mutt/cache
 mutt/secret*
 mutt/aliases
 mutt/mailboxes
+mutt/addresses
