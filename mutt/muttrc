@@ -8,6 +8,7 @@ set delete = yes
 set text_flowed = yes
 set crypt_use_gpgme=yes
 set timeout = 10
+set mail_check = 5
 # To update the address list, run 'python[2.7] ~/bin/extract-email-addrs.py ~/Mail > .mutt/addresses'
 set query_command = "echo Results && echo %s | grep --ignore-case --color=never -f - ~/.mutt/addresses"
 

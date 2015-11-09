@@ -1,5 +1,47 @@
 text/html; firefox %s ;
 text/html; elinks -dump ; copiousoutput;
 
-text/plain; view %s ;
 image/*; gpicview %s ;
+
+application/msword; libreoffice %s
+application/vnd.openxmlformats-officedocument.wordprocessingml.document;libreoffice %s
+application/vnd.openxmlformats-officedocument.wordprocessingml.template;libreoffice %s
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;libreoffice %s
+application/vnd.openxmlformats-officedocument.spreadsheetml.template;libreoffice %s
+application/vnd.openxmlformats-officedocument.presentationml.presentation;libreoffice %s
+application/vnd.sun.xml.writer;/usr/bin/libreoffice %s
+application/vnd.sun.xml.writer.global;/usr/bin/libreoffice %s
+application/vnd.stardivision.writer;/usr/bin/libreoffice %s
+application/vnd.stardivision.writer-global;/usr/bin/libreoffice %s
+application/x-starwriter;/usr/bin/libreoffice %s
+application/vnd.sun.xml.writer.template;/usr/bin/libreoffice %s
+application/msword;/usr/bin/libreoffice %s
+application/vnd.sun.xml.calc;/usr/bin/libreoffice %s
+application/vnd.stardivision.calc;/usr/bin/libreoffice %s
+application/x-starcalc;/usr/bin/libreoffice %s
+application/vnd.sun.xml.calc.template;/usr/bin/libreoffice %s
+application/excel;/usr/bin/libreoffice %s
+application/msexcel;/usr/bin/libreoffice %s
+application/vnd.ms-excel;/usr/bin/libreoffice %s
+application/x-msexcel;/usr/bin/libreoffice %s
+application/vnd.sun.xml.impress;/usr/bin/libreoffice %s
+application/vnd.stardivision.impress;/usr/bin/libreoffice %s
+application/vnd.stardivision.impress-packed;/usr/bin/libreoffice %s
+application/x-starimpress;/usr/bin/libreoffice %s
+application/vnd.sun.xml.impress.template;/usr/bin/libreoffice %s
+application/powerpoint;/usr/bin/libreoffice %s
+application/mspowerpoint;/usr/bin/libreoffice %s
+application/vnd.ms-powerpoint;/usr/bin/libreoffice %s
+application/x-mspowerpoint;/usr/bin/libreoffice %s
+application/vnd.sun.xml.draw;/usr/bin/libreoffice %s
+application/vnd.stardivision.draw;/usr/bin/libreoffice %s
+application/x-stardraw;/usr/bin/libreoffice %s
+application/vnd.sun.xml.draw.template;/usr/bin/libreoffice %s
+application/vnd.sun.xml.math;/usr/bin/libreoffice %s
+application/vnd.stardivision.math;/usr/bin/libreoffice %s
+application/x-starmath;/usr/bin/libreoffice %s
+
+audio/*; mplayer %s
+video/*; mplayer %s
+
+application/pdf; /usr/bin/evince %s
