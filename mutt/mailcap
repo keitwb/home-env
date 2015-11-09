@@ -1,4 +1,4 @@
-text/html; firefox %s ;
+text/html; chromium %s ;
 text/html; elinks -dump ; copiousoutput;
 
 image/*; gpicview %s ;

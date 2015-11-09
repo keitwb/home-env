@@ -27,7 +27,7 @@ set sort_aux=reverse-last-date-received
 set sort_browser = alpha
 
 set date_format="%m-%d-%Y %T"
-set index_format="%2C | %Z [%d] %-30.30F (%-4.4c) %s"
+set index_format="%2C | %Z [%D] %-30.30F (%-4.4c) %s"
 
 set sleep_time = 0
 set smart_wrap
