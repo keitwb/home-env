@@ -1,47 +1,47 @@
-text/html; chromium %s ;
+text/html; chromium %s & sleep 2;
 text/html; elinks -dump ; copiousoutput;
 
-image/*; gpicview %s ;
+image/*; gpicview %s & sleep 1;
 
-application/msword; libreoffice %s
-application/vnd.openxmlformats-officedocument.wordprocessingml.document;libreoffice %s
-application/vnd.openxmlformats-officedocument.wordprocessingml.template;libreoffice %s
-application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;libreoffice %s
-application/vnd.openxmlformats-officedocument.spreadsheetml.template;libreoffice %s
-application/vnd.openxmlformats-officedocument.presentationml.presentation;libreoffice %s
-application/vnd.sun.xml.writer;/usr/bin/libreoffice %s
-application/vnd.sun.xml.writer.global;/usr/bin/libreoffice %s
-application/vnd.stardivision.writer;/usr/bin/libreoffice %s
-application/vnd.stardivision.writer-global;/usr/bin/libreoffice %s
-application/x-starwriter;/usr/bin/libreoffice %s
-application/vnd.sun.xml.writer.template;/usr/bin/libreoffice %s
-application/msword;/usr/bin/libreoffice %s
-application/vnd.sun.xml.calc;/usr/bin/libreoffice %s
-application/vnd.stardivision.calc;/usr/bin/libreoffice %s
-application/x-starcalc;/usr/bin/libreoffice %s
-application/vnd.sun.xml.calc.template;/usr/bin/libreoffice %s
-application/excel;/usr/bin/libreoffice %s
-application/msexcel;/usr/bin/libreoffice %s
-application/vnd.ms-excel;/usr/bin/libreoffice %s
-application/x-msexcel;/usr/bin/libreoffice %s
-application/vnd.sun.xml.impress;/usr/bin/libreoffice %s
-application/vnd.stardivision.impress;/usr/bin/libreoffice %s
-application/vnd.stardivision.impress-packed;/usr/bin/libreoffice %s
-application/x-starimpress;/usr/bin/libreoffice %s
-application/vnd.sun.xml.impress.template;/usr/bin/libreoffice %s
-application/powerpoint;/usr/bin/libreoffice %s
-application/mspowerpoint;/usr/bin/libreoffice %s
-application/vnd.ms-powerpoint;/usr/bin/libreoffice %s
-application/x-mspowerpoint;/usr/bin/libreoffice %s
-application/vnd.sun.xml.draw;/usr/bin/libreoffice %s
-application/vnd.stardivision.draw;/usr/bin/libreoffice %s
-application/x-stardraw;/usr/bin/libreoffice %s
-application/vnd.sun.xml.draw.template;/usr/bin/libreoffice %s
-application/vnd.sun.xml.math;/usr/bin/libreoffice %s
-application/vnd.stardivision.math;/usr/bin/libreoffice %s
-application/x-starmath;/usr/bin/libreoffice %s
+application/msword; libreoffice --view %s & sleep 3
+application/vnd.openxmlformats-officedocument.wordprocessingml.document;libreoffice --view %s & sleep 3
+application/vnd.openxmlformats-officedocument.wordprocessingml.template;libreoffice --view %s & sleep 3
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;libreoffice --view %s & sleep 3
+application/vnd.openxmlformats-officedocument.spreadsheetml.template;libreoffice --view %s & sleep 3
+application/vnd.openxmlformats-officedocument.presentationml.presentation;libreoffice --view %s & sleep 3
+application/vnd.sun.xml.writer;/usr/bin/libreoffice --view %s & sleep 3
+application/vnd.sun.xml.writer.global;/usr/bin/libreoffice --view %s & sleep 3
+application/vnd.stardivision.writer;/usr/bin/libreoffice --view %s & sleep 3
+application/vnd.stardivision.writer-global;/usr/bin/libreoffice --view %s & sleep 3
+application/x-starwriter;/usr/bin/libreoffice --view %s & sleep 3
+application/vnd.sun.xml.writer.template;/usr/bin/libreoffice --view %s & sleep 3
+application/msword;/usr/bin/libreoffice --view %s & sleep 3
+application/vnd.sun.xml.calc;/usr/bin/libreoffice --view %s & sleep 3
+application/vnd.stardivision.calc;/usr/bin/libreoffice --view %s & sleep 3
+application/x-starcalc;/usr/bin/libreoffice --view %s & sleep 3
+application/vnd.sun.xml.calc.template;/usr/bin/libreoffice --view %s & sleep 3
+application/excel;/usr/bin/libreoffice --view %s & sleep 3
+application/msexcel;/usr/bin/libreoffice --view %s & sleep 3
+application/vnd.ms-excel;/usr/bin/libreoffice --view %s & sleep 3
+application/x-msexcel;/usr/bin/libreoffice --view %s & sleep 3
+application/vnd.sun.xml.impress;/usr/bin/libreoffice --view %s & sleep 3
+application/vnd.stardivision.impress;/usr/bin/libreoffice --view %s & sleep 3
+application/vnd.stardivision.impress-packed;/usr/bin/libreoffice --view %s & sleep 3
+application/x-starimpress;/usr/bin/libreoffice --view %s & sleep 3
+application/vnd.sun.xml.impress.template;/usr/bin/libreoffice --view %s & sleep 3
+application/powerpoint;/usr/bin/libreoffice --view %s & sleep 3
+application/mspowerpoint;/usr/bin/libreoffice --view %s & sleep 3
+application/vnd.ms-powerpoint;/usr/bin/libreoffice --view %s & sleep 3
+application/x-mspowerpoint;/usr/bin/libreoffice --view %s & sleep 3
+application/vnd.sun.xml.draw;/usr/bin/libreoffice --view %s & sleep 3
+application/vnd.stardivision.draw;/usr/bin/libreoffice --view %s & sleep 3
+application/x-stardraw;/usr/bin/libreoffice --view %s & sleep 3
+application/vnd.sun.xml.draw.template;/usr/bin/libreoffice --view %s & sleep 3
+application/vnd.sun.xml.math;/usr/bin/libreoffice --view %s & sleep 3
+application/vnd.stardivision.math;/usr/bin/libreoffice --view %s & sleep 3
+application/x-starmath;/usr/bin/libreoffice --view %s & sleep 3
 
-audio/*; mplayer %s
-video/*; mplayer %s
+audio/*; mplayer %s & sleep 1
+video/*; mplayer %s & sleep 1
 
-application/pdf; /usr/bin/evince %s
+application/pdf; /usr/bin/evince %s & sleep 1

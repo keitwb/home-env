@@ -107,6 +107,8 @@ if bufwinnr(1)
   map - <C-W>-
 endif
 
+" Search selection
+vnoremap // y/<C-R>"<CR>
 " Toggle the file explorer
 nnoremap <silent> <F5> :NERDTreeToggle<CR>
 " Make windows all equal size
@@ -117,6 +119,7 @@ nnoremap <F10> :NERDTreeFind<CR>
 nnoremap <F12> 
 " Remove trailing whitespace
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>
+nnoremap <Leader>hs :set hlsearch!<CR>
 
 let g:SuperTabDefaultCompletionType='context'
 
@@ -164,3 +167,5 @@ set nospell
 
 " Highlight trailing whitespace in red
 match ErrorMsg '\s\+$'
+
+set nojoinspaces

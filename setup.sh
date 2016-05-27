@@ -59,7 +59,7 @@ echo -e "\nHooking up bin folder:"
 done
 
 git submodule init
-git submodule update
+git submodule update --recursive
 
 echo -e "\nBuilding vim help tags..."
 vim '+read !echo Building vim help tags, please wait...' +Helptags +qall\!

@@ -33,7 +33,7 @@ set sleep_time = 0
 set smart_wrap
 set pager_stop = yes
 set menu_scroll = yes
-set pager_index_lines = 5
+set pager_index_lines = 8
 set narrow_tree = yes
 set ts_enabled = yes
 set send_charset="utf-8"

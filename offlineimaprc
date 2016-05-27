@@ -23,6 +23,7 @@ remotepassfile = ~/.mutt/secret.imap.personal
 expunge = yes
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 nametrans = lambda f: f.replace('[Gmail]/', '')
+auth_mechanisms = LOGIN
 
 [Repository gmail-personal-local]
 type = GmailMaildir
@@ -53,7 +54,7 @@ remotepassfile = ~/.mutt/secret.imap.quoin
 expunge = yes
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 nametrans = lambda f: f.replace('[Gmail]/', '')
-
+auth_mechanisms = LOGIN
 
 
 [mbnames]

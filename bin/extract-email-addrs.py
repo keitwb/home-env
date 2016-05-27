@@ -1,3 +1,4 @@
+#!/usr/bin/env python2
 from email.parser import HeaderParser
 from email.utils import getaddresses
 import os
@@ -39,4 +40,5 @@ if __name__ == '__main__':
         sys.exit(1)
 
     addrs = extract_all_addresses(root_dir)
+    print "Results"
     print "\n".join([format_for_mutt(k, v) for k,v in addrs.items()])
