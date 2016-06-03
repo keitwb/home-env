@@ -17,6 +17,7 @@ dotfiles="bash_aliases
           dircolors-256
           gitconfig
           gitignore
+          inputrc
           mutt
           offlineimaprc
           profile
