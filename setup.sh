@@ -25,7 +25,6 @@ dotfiles="bash_aliases
           vimrc
           vim
           tmux.conf
-          unison/share.prf
          "
 
 echo "Setting up home directory..."
