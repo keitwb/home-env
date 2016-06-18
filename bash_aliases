@@ -38,4 +38,5 @@ _dbash() {
   docker exec -it $1 bash
 }
 alias dbash=_dbash
+alias dbashrun="docker run --rm -it --entrypoint /bin/bash"
 alias tmuxn="tmux new-sess -s"

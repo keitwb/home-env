@@ -41,6 +41,9 @@ set expandtab
 set backspace=indent,eol,start
 " set cindent
 
+" Setting this to yes stops vim from creating a new inode when saving a file
+set backupcopy=yes
+
 filetype plugin on
 filetype plugin indent on
 

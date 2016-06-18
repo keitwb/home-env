@@ -1,2 +1,2 @@
-setlocal fo+=a
+setlocal fo+=awn
 setlocal tw=72
