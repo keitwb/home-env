@@ -1,7 +1,7 @@
-text/html; chromium %s & sleep 2;
+text/html; chromium-browser %s & sleep 2;
 text/html; elinks -dump ; copiousoutput;
 
-image/*; gpicview %s & sleep 1;
+image/*; xdg-open %s & sleep 1;
 
 application/msword; libreoffice --view %s & sleep 3
 application/vnd.openxmlformats-officedocument.wordprocessingml.document;libreoffice --view %s & sleep 3
@@ -44,4 +44,4 @@ application/x-starmath;/usr/bin/libreoffice --view %s & sleep 3
 audio/*; mplayer %s & sleep 1
 video/*; mplayer %s & sleep 1
 
-application/pdf; /usr/bin/evince %s & sleep 1
+application/pdf; /usr/bin/evince %s & sleep 2

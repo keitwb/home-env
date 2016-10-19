@@ -167,6 +167,7 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 let g:template_dir = "/home/benkeith/.vim/templates"
 let NERDTreeIgnore = ['\.pyc$']
 set nospell
+autocmd FileType * setlocal nospell
 
 " Highlight trailing whitespace in red
 match ErrorMsg '\s\+$'
