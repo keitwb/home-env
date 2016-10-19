@@ -1,0 +1,23 @@
+#!/bin/bash
+
+set -e
+
+md_file=$1
+tmp_file=/tmp/markup-$(date -Iseconds).html
+
+css_file=/tmp/github.css
+
+test -f $css_file || curl https://raw.githubusercontent.com/sindresorhus/github-markdown-css/gh-pages/github-markdown.css > $css_file
+
+echo '<meta http-equiv="Content-Type" content="text/html; charset=utf-8">' > $tmp_file
+
+echo '<style>' >> $tmp_file
+cat $css_file >> $tmp_file
+echo '</style>' >> $tmp_file
+
+echo '<div class="markdown-body" style="width: 800px; margin: 0 auto;">' >> $tmp_file
+curl -X POST -H 'Content-Type: text/plain' --data-binary @${md_file} https://api.github.com/markdown/raw >> $tmp_file
+echo '</div>' >> $tmp_file
+
+firefox $tmp_file
+
