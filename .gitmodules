@@ -115,3 +115,6 @@
 [submodule "vim/bundle/vim-dokuwiki"]
 	path = vim/bundle/vim-dokuwiki
 	url = https://github.com/nblock/vim-dokuwiki.git
+[submodule "vim/bundle/angular2-snippets"]
+	path = vim/bundle/angular2-snippets
+	url = https://github.com/mhartington/vim-angular2-snippets.git
