@@ -38,10 +38,6 @@
 	path = vim/bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
     ignore = dirty
-[submodule "vim/bundle/vim-snipmate"]
-	path = vim/bundle/vim-snipmate
-	url = https://github.com/garbas/vim-snipmate.git
-    ignore = dirty
 [submodule "vim/bundle/nerdtree"]
 	path = vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
@@ -118,3 +114,39 @@
 [submodule "vim/bundle/angular2-snippets"]
 	path = vim/bundle/angular2-snippets
 	url = https://github.com/mhartington/vim-angular2-snippets.git
+[submodule "vim/bundle/neosnippet"]
+	path = vim/bundle/neosnippet
+	url = https://github.com/Shougo/neosnippet.vim.git
+[submodule "vim/bundle/neosnippet-snippets"]
+	path = vim/bundle/neosnippet-snippets
+	url = https://github.com/Shougo/neosnippet-snippets.git
+[submodule "vim/bundle/neocomplete.vim"]
+	path = vim/bundle/neocomplete.vim
+	url = https://github.com/Shougo/neocomplete.vim.git
+[submodule "vim/bundle/vim-snipmate"]
+	path = vim/bundle/vim-snipmate
+	url = https://github.com/garbas/vim-snipmate.git
+[submodule "vim/bundle/vim-easy-align"]
+	path = vim/bundle/vim-easy-align
+	url = https://github.com/junegunn/vim-easy-align.git
+[submodule "vim/bundle/syntastic"]
+	path = vim/bundle/syntastic
+	url = https://github.com/vim-syntastic/syntastic.git
+[submodule "vim/bundle/tsuquyomi"]
+	path = vim/bundle/tsuquyomi
+	url = https://github.com/Quramy/tsuquyomi.git
+[submodule "vim/bundle/vim-js-pretty-template"]
+	path = vim/bundle/vim-js-pretty-template
+	url = https://github.com/Quramy/vim-js-pretty-template.git
+[submodule "vim/bundle/python3-syntax"]
+	path = vim/bundle/python3-syntax
+	url = https://github.com/wmayner/python3-syntax.git
+[submodule "vim/bundle/vimpy"]
+	path = vim/bundle/vimpy
+	url = https://github.com/dbsr/vimpy.git
+[submodule "vim/bundle/vim-vue"]
+	path = vim/bundle/vim-vue
+	url = https://github.com/posva/vim-vue.git
+[submodule "vim/bundle/tsuquyomi-vue"]
+	path = vim/bundle/tsuquyomi-vue
+	url = https://github.com/Quramy/tsuquyomi-vue.git

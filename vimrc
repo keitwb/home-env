@@ -16,7 +16,7 @@ set statusline=[%n]\ %<%.99f\ %h%w%m%r%{exists('*CapsLockStatusline')?CapsLockSt
 
 set wrap
 
-runtime! ftplugin/man.vim
+"runtime! ftplugin/man.vim
 
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
@@ -48,7 +48,7 @@ filetype plugin on
 filetype plugin indent on
 
 " Turn on syntax completion
-set ofu=syntaxcomplete#Complete
+"set ofu=syntaxcomplete#Complete
 
 " show matching brackets
 set showmatch
@@ -78,8 +78,8 @@ set autowrite
 set showcmd
 
 " automatically save and load views on startup/exit
-au BufWinLeave ?* mkview
-au BufWinEnter ?* silent loadview
+"autocmd BufWinLeave * if expand("%") != "" | mkview | endif
+"autocmd BufWinEnter * if expand("%") != "" | loadview | endif
 
 " Custom Key Mappings
 
@@ -122,31 +122,8 @@ nnoremap <F10> :NERDTreeFind<CR>
 nnoremap <F12> 
 " Remove trailing whitespace
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>
+" toggle highlighting of last search results
 nnoremap <Leader>hs :set hlsearch!<CR>
-
-let g:SuperTabDefaultCompletionType='context'
-
-" Set filetypes for salesforce.com
-au BufNewFile,BufRead *.page set filetype=html
-au BufNewFile,BufRead *.component set filetype=html
-au BufNewFile,BufRead *.resource set filetype=javascript
-au BufNewFile,BufRead *.html.us set filetype=html
-
-let g:ftplugin_sql_omni_key = '<C-B>'
-
-" JavaImp settings
-let g:JavaImpPaths = "/home/benkeith/code/android/android-sdk-linux_x86/platforms/android-8:/home/benkeith/code/projects/memoria/android/src:/home/benkeith/code/projects/memoria/android/gen:/home/benkeith/code/projects/memoria/android/libs:/home/benkeith/code/projects/memoria/android/tests/src"
-" let g:JavaImpPaths = "/home/benkeith/.vim/javaimp/dirlinks"
-let g:JavaImpPathSep = ":"
-let g:JavaImpDataDir = $HOME . "/.vim/javaimp"
-let g:JavaImpDocPaths = "/home/benkeith/code/android/android-sdk-linux_x86/docs/reference/"
-let g:JavaImpDocViewer = "firefox"
-let g:JavaImpSortPkgSep = 0
-
-"make ant work with the :make command
-set makeprg=ant\ -quiet\ -emacs\ -find\ build.xml
-
-let g:ExecPerl_perlpath = "/usr/bin/perl"
 
 " swap file location
 let s:tmpdir = $HOME . '/tmp/vim/'
@@ -155,14 +132,8 @@ if !isdirectory(s:tmpdir)
 endif
 execute 'set directory=' . s:tmpdir
 
-" Silence an error when vim does not have gui support
-let g:CSApprox_verbose_level = 0
-
 " Makes NerdTree close after you open a file
 let NERDTreeQuitOnOpen = 1
-
-" Enable python omni complete
-autocmd FileType python set omnifunc=pythoncomplete#Complete
 
 let g:template_dir = "/home/benkeith/.vim/templates"
 let NERDTreeIgnore = ['\.pyc$']
@@ -173,3 +144,20 @@ autocmd FileType * setlocal nospell
 match ErrorMsg '\s\+$'
 
 set nojoinspaces
+
+nmap ga <Plug>(EasyAlign)
+xmap ga <Plug>(EasyAlign)
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+map <C-&> <Plug>(TsuquyomiReferences)
+let g:tsuquyomi_disable_quickfix = 1
+let g:syntastic_typescript_checkers = ['tsuquyomi']
+
+set ballooneval
+autocmd FileType typescript setlocal balloonexpr=tsuquyomi#balloonexpr()
+autocmd FileType typescript nmap <buffer> <Leader>t : <C-u>echo tsuquyomi#hint()<CR>
+

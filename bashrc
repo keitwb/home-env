@@ -90,6 +90,8 @@ fi
 
 set -o vi
 export EDITOR="vim"
+set vi-ins-mode-string "+"
+set vi-cmd-mode-string ":"
 
 #TERM=screen-256color
 
