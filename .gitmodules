@@ -177,3 +177,21 @@
 [submodule "vim/pack/plugins/start/typescript-vim"]
 	path = vim/pack/plugins/start/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim
+[submodule "vim/pack/plugins/start/fzf-mru.vim"]
+	path = vim/pack/plugins/start/fzf-mru.vim
+	url = https://github.com/pbogut/fzf-mru.vim.git
+[submodule "vim/pack/plugins/start/vim-go"]
+	path = vim/pack/plugins/start/vim-go
+	url = https://github.com/fatih/vim-go
+[submodule "vim/pack/plugins/start/vimproc.vim"]
+	path = vim/pack/plugins/start/vimproc.vim
+	url = https://github.com/Shougo/vimproc.vim
+[submodule "vim/pack/plugins/start/fzf"]
+	path = vim/pack/plugins/start/fzf
+	url = https://github.com/junegunn/fzf
+[submodule "vim/pack/plugins/start/fzf.vim"]
+	path = vim/pack/plugins/start/fzf.vim
+	url = https://github.com/junegunn/fzf.vim
+[submodule "vim/pack/plugins/start/lightline.vim"]
+	path = vim/pack/plugins/start/lightline.vim
+	url = https://github.com/itchyny/lightline.vim.git
