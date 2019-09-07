@@ -1,4 +1,3 @@
-Geobee
 Repo
 repo
 json
@@ -28,7 +27,6 @@ ohio
 dev
 etc
 OSX
-primero
 preseeded
 admin
 HTTPS
@@ -43,7 +41,6 @@ env
 rsync
 databag
 Rubygems
-quoininc
 srv
 Symlink
 symlink
@@ -56,7 +53,6 @@ UI
 Cardholder
 homedir
 bashrc
-geobee
 csv
 Paypal
 MasterCard
@@ -96,7 +92,6 @@ struct
 syscall
 namespaces
 chroot
-cwd
 namespace
 filesystem
 SysV

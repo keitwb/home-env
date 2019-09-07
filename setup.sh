@@ -18,10 +18,7 @@ dotfiles="bash_aliases
           gitconfig
           gitignore
           inputrc
-          mutt
-          offlineimaprc
           profile
-          sqliterc
           vimrc
           vim
           tmux.conf

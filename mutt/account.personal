@@ -1,7 +1,0 @@
-set from = 'keitwb@gmail.com'
-set realname = 'Ben Keith'
-set my_smtp_user = 'keitwb@gmail.com'
-set folder = ~/Mail/personal
-source ~/.mutt/gmail-common
-
-source ~/.mutt/secret.smtp.personal

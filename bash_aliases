@@ -40,3 +40,6 @@ _dbash() {
 alias dbash=_dbash
 alias dbashrun="docker run --rm -it --entrypoint /bin/bash"
 alias tmuxn="tmux new-sess -s"
+alias vim="nvim"
+
+alias act="source virtualenv/bin/activate"

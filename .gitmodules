@@ -3,11 +3,11 @@
 	url = git://github.com/gmarik/vundle.git
     ignore = dirty
 [submodule "vim/bundle/camelcasemotion"]
-	path = vim/bundle/camelcasemotion
+	path = vim/pack/plugins/start/camelcasemotion
 	url = https://github.com/vim-scripts/camelcasemotion.git
     ignore = dirty
 [submodule "vim/bundle/CSApprox"]
-	path = vim/bundle/CSApprox
+	path = vim/pack/plugins/start/CSApprox
 	url = https://github.com/vim-scripts/CSApprox.git
     ignore = dirty
 [submodule "vim/bundle/JavaImp.vim--Lee"]
@@ -15,7 +15,7 @@
 	url = https://github.com/vim-scripts/JavaImp.vim--Lee.git
     ignore = dirty
 [submodule "vim/bundle/mediawiki"]
-	path = vim/bundle/mediawiki
+	path = vim/pack/plugins/start/mediawiki
 	url = https://github.com/vim-scripts/mediawiki.git
     ignore = dirty
 [submodule "vim/bundle/moin.vim"]
@@ -23,7 +23,7 @@
 	url = https://github.com/vim-scripts/moin.vim.git
     ignore = dirty
 [submodule "vim/bundle/nerdcommenter"]
-	path = vim/bundle/nerdcommenter
+	path = vim/pack/plugins/start/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
     ignore = dirty
 [submodule "vim/bundle/python.vim"]
@@ -31,7 +31,7 @@
 	url = https://github.com/vim-scripts/python.vim.git
     ignore = dirty
 [submodule "vim/bundle/rails.vim"]
-	path = vim/bundle/rails.vim
+	path = vim/pack/plugins/start/rails.vim
 	url = https://github.com/vim-scripts/rails.vim.git
     ignore = dirty
 [submodule "vim/bundle/vim-snippets"]
@@ -39,23 +39,23 @@
 	url = https://github.com/honza/vim-snippets.git
     ignore = dirty
 [submodule "vim/bundle/nerdtree"]
-	path = vim/bundle/nerdtree
+	path = vim/pack/plugins/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
     ignore = dirty
 [submodule "vim/bundle/vim-easymotion"]
-	path = vim/bundle/vim-easymotion
+	path = vim/pack/plugins/start/vim-easymotion
 	url = https://github.com/Lokaltog/vim-easymotion.git
     ignore = dirty
 [submodule "vim/bundle/vim-javascript"]
-	path = vim/bundle/vim-javascript
+	path = vim/pack/plugins/start/vim-javascript
 	url = https://github.com/pangloss/vim-javascript
     ignore = dirty
 [submodule "vim/bundle/vim-perl"]
-	path = vim/bundle/vim-perl
+	path = vim/pack/plugins/start/vim-perl
 	url = git://github.com/petdance/vim-perl.git
     ignore = dirty
 [submodule "vim/bundle/vim-scala"]
-	path = vim/bundle/vim-scala
+	path = vim/pack/plugins/start/vim-scala
 	url = https://github.com/derekwyatt/vim-scala.git
     ignore = dirty
 [submodule "vim/bundle/vim-addon-mw-utils"]
@@ -63,7 +63,7 @@
 	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
     ignore = dirty
 [submodule "vim/bundle/tlib_vim"]
-	path = vim/bundle/tlib_vim
+	path = vim/pack/plugins/start/tlib_vim
 	url = https://github.com/tomtom/tlib_vim.git
     ignore = dirty
 [submodule "vim/bundle/Command-T"]
@@ -75,14 +75,14 @@
 	url = https://github.com/aperezdc/vim-template.git
     ignore = dirty
 [submodule "vim/bundle/vim-surround"]
-	path = vim/bundle/vim-surround
+	path = vim/pack/plugins/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
     ignore = dirty
 [submodule "vim/bundle/vim-golang"]
-	path = vim/bundle/vim-golang
+	path = vim/pack/plugins/start/vim-golang
 	url = https://github.com/jnwhiteh/vim-golang.git
 [submodule "vim/bundle/vim-markdown"]
-	path = vim/bundle/vim-markdown
+	path = vim/pack/plugins/start/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown.git
 [submodule "vim/bundle/dustjs.vim"]
 	path = vim/bundle/dustjs.vim
@@ -91,28 +91,28 @@
 	path = vim/bundle/minibufexpl.vim
 	url = https://github.com/fholgado/minibufexpl.vim.git
 [submodule "vim/bundle/python-pep8-indent"]
-	path = vim/bundle/python-pep8-indent
+	path = vim/pack/plugins/start/python-pep8-indent
 	url = https://github.com/hynek/vim-python-pep8-indent.git
 [submodule "vim/bundle/github-colorscheme"]
-	path = vim/bundle/github-colorscheme
+	path = vim/pack/plugins/start/github-colorscheme
 	url = https://github.com/endel/vim-github-colorscheme.git
 [submodule "vim/bundle/colors-solarized"]
-	path = vim/bundle/colors-solarized
+	path = vim/pack/plugins/start/colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "vim/bundle/ansible-vim"]
-	path = vim/bundle/ansible-vim
+	path = vim/pack/plugins/start/ansible-vim
 	url = https://github.com/pearofducks/ansible-vim.git
 [submodule "vim/bundle/YouCompleteMe"]
 	path = vim/bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
 [submodule "vim/bundle/typescript-vim"]
-	path = vim/bundle/typescript-vim
+	path = vim/pack/plugins/start/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git
 [submodule "vim/bundle/vim-dokuwiki"]
-	path = vim/bundle/vim-dokuwiki
+	path = vim/pack/plugins/start/vim-dokuwiki
 	url = https://github.com/nblock/vim-dokuwiki.git
 [submodule "vim/bundle/angular2-snippets"]
-	path = vim/bundle/angular2-snippets
+	path = vim/pack/plugins/start/angular2-snippets
 	url = https://github.com/mhartington/vim-angular2-snippets.git
 [submodule "vim/bundle/neosnippet"]
 	path = vim/bundle/neosnippet
@@ -127,26 +127,53 @@
 	path = vim/bundle/vim-snipmate
 	url = https://github.com/garbas/vim-snipmate.git
 [submodule "vim/bundle/vim-easy-align"]
-	path = vim/bundle/vim-easy-align
+	path = vim/pack/plugins/start/vim-easy-align
 	url = https://github.com/junegunn/vim-easy-align.git
 [submodule "vim/bundle/syntastic"]
-	path = vim/bundle/syntastic
+	path = vim/pack/plugins/start/syntastic
 	url = https://github.com/vim-syntastic/syntastic.git
 [submodule "vim/bundle/tsuquyomi"]
-	path = vim/bundle/tsuquyomi
+	path = vim/pack/plugins/start/tsuquyomi
 	url = https://github.com/Quramy/tsuquyomi.git
 [submodule "vim/bundle/vim-js-pretty-template"]
-	path = vim/bundle/vim-js-pretty-template
+	path = vim/pack/plugins/start/vim-js-pretty-template
 	url = https://github.com/Quramy/vim-js-pretty-template.git
 [submodule "vim/bundle/python3-syntax"]
-	path = vim/bundle/python3-syntax
+	path = vim/pack/plugins/start/python3-syntax
 	url = https://github.com/wmayner/python3-syntax.git
 [submodule "vim/bundle/vimpy"]
-	path = vim/bundle/vimpy
+	path = vim/pack/plugins/start/vimpy
 	url = https://github.com/dbsr/vimpy.git
 [submodule "vim/bundle/vim-vue"]
-	path = vim/bundle/vim-vue
+	path = vim/pack/plugins/start/vim-vue
 	url = https://github.com/posva/vim-vue.git
 [submodule "vim/bundle/tsuquyomi-vue"]
-	path = vim/bundle/tsuquyomi-vue
+	path = vim/pack/plugins/start/tsuquyomi-vue
 	url = https://github.com/Quramy/tsuquyomi-vue.git
+[submodule "vim/bundle/neomake"]
+	path = vim/pack/plugins/start/neomake
+	url = https://github.com/neomake/neomake.git
+[submodule "vim/bundle/ale"]
+	path = vim/pack/plugins/start/ale
+	url = https://github.com/w0rp/ale.git
+[submodule "vim/pack/plugins/start/deoplete-jedi"]
+	path = vim/pack/plugins/start/deoplete-jedi
+	url = https://github.com/zchee/deoplete-jedi
+[submodule "vim/pack/plugins/start/deoplete.nvim"]
+	path = vim/pack/plugins/start/deoplete.nvim
+	url = https://github.com/Shougo/deoplete.nvim.git
+[submodule "vim/pack/plugins/start/jedi-vim"]
+	path = vim/pack/plugins/start/jedi-vim
+	url = https://github.com/davidhalter/jedi-vim.git
+[submodule "vim/pack/plugins/start/vim-jsx-typescript"]
+	path = vim/pack/plugins/start/vim-jsx-typescript
+	url = https://github.com/peitalin/vim-jsx-typescript.git
+[submodule "vim/pack/plugins/start/vim-jsx-pretty"]
+	path = vim/pack/plugins/start/vim-jsx-pretty
+	url = https://github.com/MaxMEllon/vim-jsx-pretty.git
+[submodule "vim/pack/plugins/start/vim-javascript"]
+	path = vim/pack/plugins/start/vim-javascript
+	url = https://github.com/pangloss/vim-javascript
+[submodule "vim/pack/plugins/start/typescript-vim"]
+	path = vim/pack/plugins/start/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim

@@ -1,7 +1,0 @@
-set use_from = yes
-set spoolfile = '+INBOX'
-set postponed = '+Drafts'
-unset record
-set smtp_url = "smtp://$my_smtp_user@smtp.gmail.com:587/"
-
-macro index,pager A "<save-message>=Archives<enter>" "move message to the archive"

@@ -1,14 +1,10 @@
-execute pathogen#infect()
-
-set nocompatible
-
 syntax on
+
 colorscheme herald
-set t_Co=256
 set background=dark
 
 set cursorline
-" set cursorcolumn
+set cursorcolumn
 
 set cmdheight=1
 set laststatus=2
@@ -16,15 +12,10 @@ set statusline=[%n]\ %<%.99f\ %h%w%m%r%{exists('*CapsLockStatusline')?CapsLockSt
 
 set wrap
 
-"runtime! ftplugin/man.vim
-
-" Uncomment the following to have Vim jump to the last position when
-" reopening a file
+" Make Vim jump to the last position when reopening a file
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
-
-" autocmd BufNewFile,BufRead *.py compiler python
 
 " show line numbers
 set number
@@ -37,9 +28,9 @@ set autoindent
 set smartindent
 set shiftwidth=4
 set tabstop=4
+set softtabstop=4
 set expandtab
 set backspace=indent,eol,start
-" set cindent
 
 " Setting this to yes stops vim from creating a new inode when saving a file
 set backupcopy=yes
@@ -47,39 +38,32 @@ set backupcopy=yes
 filetype plugin on
 filetype plugin indent on
 
-" Turn on syntax completion
-"set ofu=syntaxcomplete#Complete
-
-" show matching brackets
-set showmatch
-
-" don't highlight search matches
-set nohls
-
 " set the console width after which to create a newline
-set textwidth=79
+set textwidth=100
 " don't break a line already longer than textwidth
 set formatoptions+=lv
 
 " make the screen move before the cursor reaches the bottom
 set scrolloff=3
 
-" search as you type
-set incsearch
+" Avoid unnecessary redraws
+set lazyredraw
 
 " search settings
+" search as you type
+set incsearch
 set ignorecase
 set smartcase
+
+" Make things unfolded by default (up to 10 levels)
+set foldlevelstart=10
+set foldnestmax=10
 
 " automatically save when certain commands are called
 set autowrite
 
 " show imcomplete commands in bottom right
 set showcmd
-
-" automatically save and load views on startup/exit
-"autocmd BufWinLeave * if expand("%") != "" | mkview | endif
-"autocmd BufWinEnter * if expand("%") != "" | loadview | endif
 
 " Custom Key Mappings
 
@@ -89,12 +73,11 @@ noremap <Right> <NOP>
 noremap <Up>    <NOP>
 noremap <Down>  <NOP>
 
+noremap <Leader>m :FZFMru<CR>
 " refresh the syntax highlighting in the whole file
 noremap <Leader>ss :syntax sync fromstart<CR>
 " insert just one character before cursor (TODO: doesn't work at beginning of line)
 nnoremap <Space> yhpr
-" insert a line below cursor without going into insert mode
-nnoremap <CR> o<Esc>
 " split line after cursor (complement of Shift-j)
 nnoremap <C-j> i<CR><Esc>^
 
@@ -110,6 +93,10 @@ if bufwinnr(1)
   map - <C-W>-
 endif
 
+nnoremap ; :Files<CR>
+
+" Make Ctrl+c behave the same as Escape key
+inoremap <C-c> <Esc>
 " Search selection
 vnoremap // y/<C-R>"<CR>
 " Toggle the file explorer
@@ -122,6 +109,9 @@ nnoremap <F10> :NERDTreeFind<CR>
 nnoremap <F12> 
 " Remove trailing whitespace
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>
+
+" don't highlight search matches
+set nohls
 " toggle highlighting of last search results
 nnoremap <Leader>hs :set hlsearch!<CR>
 
@@ -134,9 +124,9 @@ execute 'set directory=' . s:tmpdir
 
 " Makes NerdTree close after you open a file
 let NERDTreeQuitOnOpen = 1
-
-let g:template_dir = "/home/benkeith/.vim/templates"
+" Don't show these files in NerdTree
 let NERDTreeIgnore = ['\.pyc$']
+
 set nospell
 autocmd FileType * setlocal nospell
 
@@ -145,19 +135,11 @@ match ErrorMsg '\s\+$'
 
 set nojoinspaces
 
-nmap ga <Plug>(EasyAlign)
-xmap ga <Plug>(EasyAlign)
+" ALE settings
+"let g:ale_use_global_executables = 0
+let g:ale_fix_on_save = 1
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_insert_leave = 1
+let g:ale_pattern_options = { '\.gen.ts$': {'ale_fixers': []}, '_gen.py': {'ale_fixers': []} }
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-map <C-&> <Plug>(TsuquyomiReferences)
-let g:tsuquyomi_disable_quickfix = 1
-let g:syntastic_typescript_checkers = ['tsuquyomi']
-
-set ballooneval
-autocmd FileType typescript setlocal balloonexpr=tsuquyomi#balloonexpr()
-autocmd FileType typescript nmap <buffer> <Leader>t : <C-u>echo tsuquyomi#hint()<CR>
-
+set clipboard+=unnamedplus
