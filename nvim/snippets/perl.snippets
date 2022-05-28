@@ -1,0 +1,11 @@
+snippet kv
+	${1:key} => ${2:value},${3}
+snippet acc
+	sub ${1:name} {
+		my $self = shift;
+		if (@_) { $self->{_$1} = shift; }
+		return $self->{_$1};
+	}
+	${2}
+snippet mp
+	my ( $self, ${1:params} ) = @_;${2}
