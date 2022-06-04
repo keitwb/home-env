@@ -17,6 +17,7 @@ key(n, '<Leader>p', ':set paste<CR>', noremap )
 key(n, '<Leader>np', ':set nopaste<CR>', noremap )
 key(n, '<Leader>s', ':set spell<CR>', noremap )
 key(n, '<Leader>ns', ':set nospell<CR>', noremap )
+key(n, '<Leader>cc', ':cclose<CR>', noremap )
 
 -- vertically expand current window
 if vim.fn.bufwinnr(1) then
@@ -27,7 +28,7 @@ end
 -- Make Ctrl+c behave the same as Escape key
 key('i', '<C-c>', '<Esc>', noremap)
 -- Toggle the file explorer
-key(n, '<silent> <F5>', ':NERDTreeToggle<CR>', noremap)
+key(n, '<F5>', ':NERDTreeToggle<CR>', { noremap = true, silent = true})
 
 -- Open NERDTree in the dir of the current file
 key(n, '<F10>', ':NERDTreeFind<CR>', noremap)
@@ -38,9 +39,3 @@ key(n, '<Leader>rtw', [[:%s/\s\+$//e<CR>]], noremap)
 
 -- toggle highlighting of last search results
 key(n, '<Leader>hs', ':set hlsearch!<CR>', noremap )
-
--- Find files using Telescope command-line sugar.
-key(n, ';', '<cmd>Telescope find_files hidden=true<cr>', noremap )
-key(n, '<leader>fg', '<cmd>Telescope live_grep<cr>', noremap)
-key(n, '<leader>m', '<cmd>:lua require("telescope.builtin").buffers({ sort_lastused=true })<cr>', noremap)
-key(n, '<leader>fh', '<cmd>Telescope help_tags<cr>', noremap)

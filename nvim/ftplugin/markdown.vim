@@ -1,2 +1,0 @@
-set nosi
-set spell

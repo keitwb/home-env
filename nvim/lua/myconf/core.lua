@@ -1,3 +1,4 @@
+local os = require("os")
 local o = vim.o
 
 o.syntax = "on"
@@ -10,7 +11,7 @@ o.hidden = true
 o.updatetime = 300
 
 -- Don't pass messages to |ins-completion-menu|.
-o.shortmess = "filnxtToOFc"
+o.shortmess = "filnxtToOcF"
 
 o.completeopt = "menu,menuone,noselect"
 
@@ -44,9 +45,6 @@ o.signcolumn = "number"
 -- Setting this to yes stops vim from creating a new inode when saving a file
 o.backupcopy = "yes"
 
-vim.cmd "filetype plugin on"
-vim.cmd "filetype plugin indent on"
-
 -- set the console width after which to create a newline
 o.textwidth = 100
 -- don't break a line already longer than textwidth
@@ -63,6 +61,8 @@ o.lazyredraw = true
 o.incsearch = true
 o.ignorecase = true
 o.smartcase = true
+o.joinspaces = false
+
 
 -- Make things unfolded by default (up to 10 levels)
 o.foldlevelstart = 10
@@ -77,9 +77,28 @@ o.showcmd = true
 -- don't highlight search matches
 o.hls = false
 
+o.spell = false
+
+vim.api.nvim_create_autocmd("FileType", {
+  command = "setlocal nospell",
+})
+
+-- Make Vim jump to the last position when reopening a file
+vim.api.nvim_create_autocmd("BufReadPost", {
+  command = [[if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif]],
+})
+
+
 -- swap file location
---local tmpdir = os.getenv("HOME") .. '/tmp/vim/'
+local tmpdir = os.getenv("HOME") .. '/tmp/vim/'
 --if !isdirectory(s:tmpdir)
 --  call mkdir(s:tmpdir)
 --endif
---execute 'set directory=' . s:tmpdir
+o.directory = tmpdir
+
+-- Makes NerdTree close after you open a file
+vim.g.NERDTreeQuitOnOpen = 1
+vim.g.NERDTreeShowHidden=1
+-- Don't show these files in NerdTree
+vim.g.NERDTreeIgnore = {".pyc$"}
+
