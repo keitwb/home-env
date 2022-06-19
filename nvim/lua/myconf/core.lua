@@ -3,7 +3,7 @@ local o = vim.o
 
 o.syntax = "on"
 o.termguicolors = true
-vim.cmd [[ colorscheme monokai_pro ]]
+vim.cmd [[ colorscheme everforest ]]
 o.background = "dark"
 
 o.hidden = true

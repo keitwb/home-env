@@ -8,6 +8,7 @@ vim.g.did_load_filetypes = 0
 -- After updating anything in this list run `:PaqInstall`
 require 'paq' {
   'phanviet/vim-monokai-pro',
+  'sainnhe/everforest',
   'vim-scripts/camelcasemotion',
   'itchyny/lightline.vim',
   'preservim/nerdcommenter',
