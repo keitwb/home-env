@@ -28,3 +28,5 @@ cmp.setup({
     { name = 'luasnip' }, -- For luasnip users.
   })
 })
+
+vim.g.omni_sql_default_compl_type = 'syntax'

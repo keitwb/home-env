@@ -1,7 +1,7 @@
 -- Use lua filetype detection
 vim.g.do_filetype_lua = 1
 -- Disable filetype.vim detection
-vim.g.did_load_filetypes = 0
+-- vim.g.did_load_filetypes = 0
 
 
 -- For a fresh instance, run :PaqSync
@@ -24,6 +24,8 @@ require 'paq' {
   'maralla/gomod.vim',
   'ckipp01/nvim-jenkinsfile-linter',
   'j-hui/fidget.nvim',
+  'cuducos/yaml.nvim',
+  'folke/trouble.nvim',
 
   'hrsh7th/cmp-nvim-lsp',
   'hrsh7th/cmp-buffer',
