@@ -6,6 +6,8 @@ vim.filetype.add({
     stg = "stg",
     md = "markdown",
     view = "svg",
+    tf = "terraform",
+    hcl = "terraform",
   },
   filename = {
     Jenkinsfile = "groovy",

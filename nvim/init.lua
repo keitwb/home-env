@@ -1,7 +1,5 @@
 -- Use lua filetype detection
 vim.g.do_filetype_lua = 1
--- Disable filetype.vim detection
--- vim.g.did_load_filetypes = 0
 
 
 -- For a fresh instance, run :PaqSync
