@@ -24,6 +24,8 @@ require 'paq' {
   'j-hui/fidget.nvim',
   'cuducos/yaml.nvim',
   'folke/trouble.nvim',
+  'vigoux/ltex-ls.nvim',
+  'jose-elias-alvarez/null-ls.nvim',
 
   'hrsh7th/cmp-nvim-lsp',
   'hrsh7th/cmp-buffer',

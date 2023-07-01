@@ -79,9 +79,9 @@ o.hls = false
 
 o.spell = false
 
-vim.api.nvim_create_autocmd("FileType", {
-  command = "setlocal nospell",
-})
+--vim.api.nvim_create_autocmd("FileType", {
+--  command = "setlocal nospell",
+--})
 
 -- Make Vim jump to the last position when reopening a file
 vim.api.nvim_create_autocmd("BufReadPost", {
