@@ -13,6 +13,8 @@ local function get_python_path(workspace)
   -- Find and use virtualenv or local python script in workspace directory.
   for dir in pathutil.iterate_parents(workspace .. '/.') do
     for _, pattern in ipairs({ '*', '.*' }) do
+      -- A special script that a project can create that wraps the desired python command in a shell
+      -- script
       local py_script = pathutil.join(dir, "python")
       if pathutil.is_file(py_script) then
         return py_script
@@ -53,9 +55,13 @@ require 'lspconfig'.pyright.setup {
 } -- pip install pyright
 
 local function null_ls_python_binary(bin_name)
+  local cached = {}
   return function(params)
-    local pypath = get_python_path(pathutil.dirname(params.bufname))
-    return pathutil.join(get_python_bin_dir(pypath), bin_name)
+    if cached[params.bufname] == nil then
+      local pypath = get_python_path(pathutil.dirname(params.bufname))
+      cached[params.bufname] = pathutil.join(get_python_bin_dir(pypath), bin_name)
+    end
+    return cached[params.bufname]
   end
 end
 
