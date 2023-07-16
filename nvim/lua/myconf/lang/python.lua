@@ -31,17 +31,33 @@ local function get_python_path(workspace)
   return vim.fn.exepath('python3')
 end
 
+local python_path_cache = {}
+local function get_python_path_cached(workspace)
+  if python_path_cache[workspace] == nil then
+    python_path_cache[workspace] = get_python_path(workspace)
+  end
+  return python_path_cache[workspace]
+end
+
+
 local function get_python_bin_dir(pypath)
   return pathutil.dirname(vim.fn.system { pypath, '-c', "import sys; print(sys.executable)"})
+end
+
+local python_bin_dir_cache = {}
+local function get_python_bin_dir_cached(pypath)
+  if python_bin_dir_cache[pypath] == nil then
+    python_bin_dir_cache[pypath] = get_python_bin_dir(pypath)
+  end
+  return python_bin_dir_cache[pypath]
 end
 
 require 'lspconfig'.pyright.setup {
   on_attach = common.on_attach,
   on_new_config = function(new_config, new_root_dir)
-    local pypath = get_python_path(new_root_dir)
+    local pypath = get_python_path_cached(new_root_dir)
     new_config.settings.python.pythonPath = pypath
-    new_config.settings.python.analysis.extraPaths = pathutil.dirname(get_python_bin_dir(pypath))
-    print("Using Python at ".. get_python_bin_dir(pypath))
+    new_config.settings.python.analysis.extraPaths = pathutil.dirname(get_python_bin_dir_cached(pypath))
   end,
   settings = {
     python = {
